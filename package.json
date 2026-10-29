@@ -1,0 +1,21 @@
+{
+  "name": "creative-workflow-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio demonstration of a task-driven creative workflow with approval-gated generation",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test.cjs demo/test.cjs",
+    "demo": "node demo/server.cjs",
+    "test:demo": "node --test demo/test.cjs",
+    "test:core": "node --test test.cjs",
+    "check:public": "node scripts/check-public-content.cjs"
+  },
+  "dependencies": {
+    "sharp": "0.35.5"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

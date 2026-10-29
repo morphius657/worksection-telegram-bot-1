@@ -1,0 +1,53 @@
+{
+  "version": "portfolio-1.0",
+  "precedence": ["Current task and explicit updates", "Reference roles", "Explicitly selected synthetic campaign", "General preferences"],
+  "defaults": {
+    "generator": "Grok Imagine 2.0",
+    "artwork_language": "English",
+    "explanation_language": "English",
+    "aspect_ratio": "1:1",
+    "purpose": "Fictional portfolio examples only"
+  },
+  "global_rules": [
+    "Use only the facts supplied in the current brief.",
+    "Keep each task's context separate.",
+    "Treat visual references as style evidence, not offer evidence.",
+    "Ask for clarification when required facts are missing.",
+    "Require explicit approval before image generation.",
+    "Return separate files for separate outputs.",
+    "Keep headings readable and within their layout.",
+    "Do not invent prices, rewards, availability, or product features."
+  ],
+  "formats": {"default": "Single static square image", "alternatives": "Use formats specified in the task"},
+  "creative_director_policy": {"candidate_count": "Two candidates per requested output", "selection": "Review against the brief before writing prompts"},
+  "brands": {
+    "studio": {
+      "display_name": "Sample Studio (fictional)",
+      "match_terms": ["Sample Studio"],
+      "design": ["Use clear hierarchy and generous whitespace."],
+      "offer_isolation": ["Use current task facts; demo records require an explicit selection."]
+    },
+    "notebook": {
+      "display_name": "Sample Notebook (fictional)",
+      "match_terms": ["Sample Notebook"],
+      "design": ["Use readable type and simple illustrations."],
+      "offer_isolation": ["Never import another task's copy or conditions."]
+    }
+  },
+  "campaigns": [
+    {
+      "key": "studio_preview",
+      "brand": "studio",
+      "aliases": ["DEMO-001"],
+      "selection_terms": ["workspace preview"],
+      "facts": {"product": "Fictional workspace preview", "description": "Organize sample ideas in one place.", "cta": "View demo"}
+    },
+    {
+      "key": "studio_workspace",
+      "brand": "studio",
+      "aliases": ["DEMO-002"],
+      "selection_terms": ["sample workspace"],
+      "facts": {"product": "Fictional workspace", "description": "Arrange sample notes into a simple board.", "cta": "View demo"}
+    }
+  ]
+}
